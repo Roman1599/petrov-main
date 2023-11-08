@@ -1,8 +1,10 @@
 name: UI Tests
-on:
-  schedule:
-    - cron:  '* * * * *'
+on: workflow_dispatch
+
 jobs:
+  ui-tests:
+    runs-on: ubuntu-latest
+
   create_issue:
     runs-on: ubuntu-latest
     permissions:
