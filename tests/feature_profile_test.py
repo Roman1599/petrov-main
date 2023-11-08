@@ -82,8 +82,6 @@ class TestProfileFeature(BaseTest):
         self.dashboard_page.click_directory()
         self.directory_page.is_opened()
         self.directory_page.add_field_employee(f"Luis")
-        # self.directory_page.choose_params_employee()
-        time.sleep(5)
         self.directory_page.click_search_btn()
         self.personal_page.make_screen("Search success")
 

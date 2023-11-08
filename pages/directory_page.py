@@ -29,14 +29,6 @@ class DirectoryPage(BasePage):
         self.wait.until(EC.element_to_be_clickable(self.FIRST_NAME)).click()
 
 
-    # @allure.step("Add fields")
-    # def choose_params_employee(self):
-    #     self.wait.until(EC.element_to_be_clickable(self.JOB_TITLE)).click()
-    #     self.wait.until(EC.element_to_be_clickable(self.JOB_ASSISTANT)).click()
-    #     self.wait.until(EC.element_to_be_clickable(self.LOCATION)).click()
-    #     self.wait.until(EC.element_to_be_clickable(self.CANADIAN_LOC)).click()
-
-
     @allure.step("Click on Post button")
     def click_search_btn(self):
         self.wait.until(EC.element_to_be_clickable(self.SEARCH_BTN)).click()

@@ -1,7 +1,7 @@
 name: UI Tests
 on:
   schedule:
-    - cron:  '30 5,17 * * *'
+    - cron:  '* * * * *'
 jobs:
   create_issue:
     runs-on: ubuntu-latest
