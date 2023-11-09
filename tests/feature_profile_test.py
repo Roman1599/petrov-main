@@ -11,7 +11,7 @@ from pages.buzz_page import BuzzPage
 @allure.feature("Profile Functionaloty")
 class TestProfileFeature(BaseTest):
 
-    @allure.title("change profile name")
+    @allure.title("Change profile name")
     @allure.severity("Critical")
     # @pytest.mark.smoke
     def test_change_profile_name(self):
@@ -25,6 +25,7 @@ class TestProfileFeature(BaseTest):
         self.personal_page.change_name(f"Test {random.randint(1,100)}")
         self.personal_page.save_changes()
         self.personal_page.is_changes_saved()
+        time.sleep(2)
         self.personal_page.make_screen("Success")
 
     @allure.title("Click on sections Most")
@@ -51,6 +52,7 @@ class TestProfileFeature(BaseTest):
         self.buzz_page.is_opened()
         self.buzz_page.click_post_area(f"Test text {random.randint(1, 100)}")
         self.buzz_page.click_post_btn()
+        time.sleep(2)
         self.personal_page.make_screen("Post success")
 
 
@@ -68,6 +70,7 @@ class TestProfileFeature(BaseTest):
         self.pim_page.fill_fields("Luis","Suarez")
         time.sleep(3)
         self.pim_page.click_save_btn()
+        time.sleep(2)
         self.pim_page.make_screen("Add employee success")
 
 
@@ -83,6 +86,7 @@ class TestProfileFeature(BaseTest):
         self.directory_page.is_opened()
         self.directory_page.add_field_employee(f"Luis")
         self.directory_page.click_search_btn()
+        time.sleep(2)
         self.personal_page.make_screen("Search success")
 
 

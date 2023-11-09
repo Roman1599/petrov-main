@@ -19,10 +19,13 @@ class BuzzPage(BasePage):
     @allure.step("Click on section Most")
     def click_most(self):
         self.wait.until(EC.element_to_be_clickable(self.RESENT_POSTS)).click()
+        time.sleep(2)
         self.make_screen("Most Popular Posts")
         self.wait.until(EC.element_to_be_clickable(self.LIKED_POSTS)).click()
+        time.sleep(2)
         self.make_screen("Most Liked Posts")
         self.wait.until(EC.element_to_be_clickable(self.COMMENT_POSTS)).click()
+        time.sleep(2)
         self.make_screen("Most Commented Posts")
 
     @allure.step("Click on Post area")
