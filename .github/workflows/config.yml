@@ -2,7 +2,7 @@ name: UI Tests
 
 on:
   schedule:
-    - cron: '030 * * * *'
+    - cron: '030 12-17 * * 1-5'
 
 jobs:
   ui-tests:
