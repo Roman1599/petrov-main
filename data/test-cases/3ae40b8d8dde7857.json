@@ -1,12 +1,12 @@
 {
-  "uid" : "38b5af50b4a9e24e",
-  "name" : "Add employee",
-  "fullName" : "tests.feature_profile_test.TestProfileFeature#test_add_employee",
-  "historyId" : "7cc231a3811eb8493b8be6f2ed2e7892",
+  "uid" : "3ae40b8d8dde7857",
+  "name" : "Post random information",
+  "fullName" : "tests.feature_profile_test.TestProfileFeature#test_post",
+  "historyId" : "028bb0f23aa13d60158934f7f2b84f0f",
   "time" : {
-    "start" : 1699594744128,
-    "stop" : 1699594756970,
-    "duration" : 12842
+    "start" : 1699598378477,
+    "stop" : 1699598387684,
+    "duration" : 9207
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,31 +14,31 @@
   "beforeStages" : [ {
     "name" : "setup",
     "time" : {
-      "start" : 1699594744127,
-      "stop" : 1699594744128,
+      "start" : 1699598378475,
+      "stop" : 1699598378476,
       "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
     "hasContent" : false,
+    "stepsCount" : 0,
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false
   }, {
     "name" : "driver",
     "time" : {
-      "start" : 1699594743308,
-      "stop" : 1699594744127,
-      "duration" : 819
+      "start" : 1699598377650,
+      "stop" : 1699598378474,
+      "duration" : 824
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
     "hasContent" : false,
+    "stepsCount" : 0,
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false
   } ],
@@ -47,24 +47,24 @@
     "steps" : [ {
       "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/auth/login page",
       "time" : {
-        "start" : 1699594744128,
-        "stop" : 1699594745456,
-        "duration" : 1328
+        "start" : 1699598378477,
+        "stop" : 1699598380628,
+        "duration" : 2151
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 0,
       "hasContent" : false,
+      "stepsCount" : 0,
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false
     }, {
       "name" : "Enter login",
       "time" : {
-        "start" : 1699594745456,
-        "stop" : 1699594746511,
-        "duration" : 1055
+        "start" : 1699598380628,
+        "stop" : 1699598381682,
+        "duration" : 1054
       },
       "status" : "passed",
       "steps" : [ ],
@@ -73,16 +73,16 @@
         "name" : "login",
         "value" : "'Admin'"
       } ],
-      "stepsCount" : 0,
       "hasContent" : true,
+      "stepsCount" : 0,
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false
     }, {
       "name" : "Enter password",
       "time" : {
-        "start" : 1699594746511,
-        "stop" : 1699594746581,
-        "duration" : 70
+        "start" : 1699598381682,
+        "stop" : 1699598381748,
+        "duration" : 66
       },
       "status" : "passed",
       "steps" : [ ],
@@ -91,148 +91,130 @@
         "name" : "password",
         "value" : "'admin123'"
       } ],
-      "stepsCount" : 0,
       "hasContent" : true,
+      "stepsCount" : 0,
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false
     }, {
       "name" : "Click submit",
       "time" : {
-        "start" : 1699594746581,
-        "stop" : 1699594746634,
-        "duration" : 53
+        "start" : 1699598381748,
+        "stop" : 1699598381792,
+        "duration" : 44
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 0,
       "hasContent" : false,
+      "stepsCount" : 0,
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false
     }, {
       "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index is opened",
       "time" : {
-        "start" : 1699594746634,
-        "stop" : 1699594747499,
-        "duration" : 865
+        "start" : 1699598381792,
+        "stop" : 1699598382840,
+        "duration" : 1048
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 0,
       "hasContent" : false,
+      "stepsCount" : 0,
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false
     }, {
-      "name" : "Click on 'Pim' link",
+      "name" : "Click on 'Buzz' link",
       "time" : {
-        "start" : 1699594747499,
-        "stop" : 1699594749250,
-        "duration" : 1751
+        "start" : 1699598382840,
+        "stop" : 1699598384377,
+        "duration" : 1537
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 0,
       "hasContent" : false,
+      "stepsCount" : 0,
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false
     }, {
-      "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList is opened",
+      "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/buzz/viewBuzz is opened",
       "time" : {
-        "start" : 1699594749250,
-        "stop" : 1699594749252,
+        "start" : 1699598384377,
+        "stop" : 1699598384379,
         "duration" : 2
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 0,
       "hasContent" : false,
+      "stepsCount" : 0,
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false
     }, {
-      "name" : "Click click add emloyee",
+      "name" : "Click on Post area",
       "time" : {
-        "start" : 1699594749252,
-        "stop" : 1699594750633,
-        "duration" : 1381
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "hasContent" : false,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false
-    }, {
-      "name" : "Fill fields",
-      "time" : {
-        "start" : 1699594750633,
-        "stop" : 1699594751757,
-        "duration" : 1124
+        "start" : 1699598384380,
+        "stop" : 1699598385457,
+        "duration" : 1077
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ {
-        "name" : "new_value_fir",
-        "value" : "'Luis'"
-      }, {
-        "name" : "new_value_sec",
-        "value" : "'Suarez'"
+        "name" : "new_value",
+        "value" : "'Test text 71'"
       } ],
-      "stepsCount" : 0,
       "hasContent" : true,
+      "stepsCount" : 0,
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false
     }, {
-      "name" : "Click Save button",
+      "name" : "Click on Post button",
       "time" : {
-        "start" : 1699594754757,
-        "stop" : 1699594754804,
-        "duration" : 47
+        "start" : 1699598385457,
+        "stop" : 1699598385502,
+        "duration" : 45
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 0,
       "hasContent" : false,
+      "stepsCount" : 0,
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false
     } ],
     "attachments" : [ {
-      "uid" : "262b776f9a8b973b",
-      "name" : "Add employee success",
-      "source" : "262b776f9a8b973b.png",
+      "uid" : "d5ceae82f0e4f3a7",
+      "name" : "Post success",
+      "source" : "d5ceae82f0e4f3a7.png",
       "type" : "image/png",
-      "size" : 102396
+      "size" : 394277
     } ],
     "parameters" : [ ],
-    "stepsCount" : 10,
     "hasContent" : true,
+    "stepsCount" : 9,
     "attachmentsCount" : 1,
     "shouldDisplayMessage" : false
   },
   "afterStages" : [ {
     "name" : "driver::0",
     "time" : {
-      "start" : 1699594756971,
-      "stop" : 1699594757028,
-      "duration" : 57
+      "start" : 1699598387685,
+      "stop" : 1699598387743,
+      "duration" : 58
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
     "hasContent" : false,
+    "stepsCount" : 0,
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false
   } ],
@@ -253,7 +235,7 @@
     "value" : "TestProfileFeature"
   }, {
     "name" : "host",
-    "value" : "b21b8fb4eb77"
+    "value" : "a52667a327d1"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -281,152 +263,163 @@
     "history" : {
       "statistic" : {
         "failed" : 0,
-        "broken" : 0,
+        "broken" : 3,
         "skipped" : 0,
-        "passed" : 18,
+        "passed" : 16,
         "unknown" : 0,
-        "total" : 18
+        "total" : 19
       },
       "items" : [ {
-        "uid" : "9e94d5d7032aeaf3",
+        "uid" : "38ee62f83df77eb0",
         "status" : "passed",
         "time" : {
-          "start" : 1699591132922,
-          "stop" : 1699591147122,
-          "duration" : 14200
+          "start" : 1699594735037,
+          "stop" : 1699594743248,
+          "duration" : 8211
         }
       }, {
-        "uid" : "a7759c4e327759e2",
-        "status" : "passed",
+        "uid" : "9ae4a19247d134ce",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\n  (Session info: headless chrome=112.0.5615.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception",
         "time" : {
-          "start" : 1699587549940,
-          "stop" : 1699587563009,
-          "duration" : 13069
+          "start" : 1699591124631,
+          "stop" : 1699591131995,
+          "duration" : 7364
         }
       }, {
-        "uid" : "a2a14c2014ae2cd2",
+        "uid" : "fda59a6fe0355b0c",
         "status" : "passed",
         "time" : {
-          "start" : 1699584007753,
-          "stop" : 1699584021946,
-          "duration" : 14193
+          "start" : 1699587540636,
+          "stop" : 1699587549010,
+          "duration" : 8374
         }
       }, {
-        "uid" : "2baf185505155998",
+        "uid" : "f6b96e408feac7bd",
         "status" : "passed",
         "time" : {
-          "start" : 1699580195928,
-          "stop" : 1699580208612,
-          "duration" : 12684
+          "start" : 1699583997608,
+          "stop" : 1699584006873,
+          "duration" : 9265
         }
       }, {
-        "uid" : "fd8dabd66636995f",
+        "uid" : "e630fe48dd89a50b",
         "status" : "passed",
         "time" : {
-          "start" : 1699573145946,
-          "stop" : 1699573158779,
-          "duration" : 12833
+          "start" : 1699580186961,
+          "stop" : 1699580195055,
+          "duration" : 8094
         }
       }, {
-        "uid" : "b9d8492e162f296b",
+        "uid" : "bfa92e44ed294c02",
         "status" : "passed",
         "time" : {
-          "start" : 1699569536776,
-          "stop" : 1699569550071,
-          "duration" : 13295
+          "start" : 1699573137096,
+          "stop" : 1699573145071,
+          "duration" : 7975
         }
       }, {
-        "uid" : "6849abfed10abd44",
+        "uid" : "c9e938d8f9f370db",
         "status" : "passed",
         "time" : {
-          "start" : 1699565960085,
-          "stop" : 1699565974582,
-          "duration" : 14497
+          "start" : 1699569527668,
+          "stop" : 1699569535897,
+          "duration" : 8229
         }
       }, {
-        "uid" : "81ca9d31f78340d6",
+        "uid" : "46aabee8c515c7c4",
         "status" : "passed",
         "time" : {
-          "start" : 1699562365952,
-          "stop" : 1699562380641,
-          "duration" : 14689
+          "start" : 1699565949447,
+          "stop" : 1699565959101,
+          "duration" : 9654
         }
       }, {
-        "uid" : "c2538d2a0a8fe683",
-        "status" : "passed",
+        "uid" : "afe4c11f57c7c6b0",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable\n  (Session info: headless chrome=112.0.5615.165)",
         "time" : {
-          "start" : 1699558764217,
-          "stop" : 1699558779217,
-          "duration" : 15000
+          "start" : 1699562357555,
+          "stop" : 1699562364892,
+          "duration" : 7337
         }
       }, {
-        "uid" : "e13044ca2b927c28",
+        "uid" : "d80c76e86c501c68",
         "status" : "passed",
         "time" : {
-          "start" : 1699555185943,
-          "stop" : 1699555200911,
-          "duration" : 14968
+          "start" : 1699558753387,
+          "stop" : 1699558763214,
+          "duration" : 9827
         }
       }, {
-        "uid" : "e8cfe296cfdc0e30",
+        "uid" : "f3b15fb842a41629",
         "status" : "passed",
         "time" : {
-          "start" : 1699551550554,
-          "stop" : 1699551564532,
-          "duration" : 13978
+          "start" : 1699555175250,
+          "stop" : 1699555184962,
+          "duration" : 9712
         }
       }, {
-        "uid" : "44fb8f19ee3a3eeb",
+        "uid" : "e26563e5553cdb6f",
         "status" : "passed",
         "time" : {
-          "start" : 1699548113560,
-          "stop" : 1699548126623,
-          "duration" : 13063
+          "start" : 1699551540433,
+          "stop" : 1699551549513,
+          "duration" : 9080
         }
       }, {
-        "uid" : "521f1d98d18106da",
+        "uid" : "1ff1bf979a279da2",
         "status" : "passed",
         "time" : {
-          "start" : 1699544337859,
-          "stop" : 1699544350812,
-          "duration" : 12953
+          "start" : 1699548104433,
+          "stop" : 1699548112685,
+          "duration" : 8252
         }
       }, {
-        "uid" : "3b051d022814f424",
+        "uid" : "918fe60744e0c0a6",
         "status" : "passed",
         "time" : {
-          "start" : 1699541395705,
-          "stop" : 1699541410023,
-          "duration" : 14318
+          "start" : 1699544328794,
+          "stop" : 1699544336973,
+          "duration" : 8179
         }
       }, {
-        "uid" : "32da72bb8c7c18b9",
+        "uid" : "72ef19d8838782f8",
         "status" : "passed",
         "time" : {
-          "start" : 1699538002826,
-          "stop" : 1699538017006,
-          "duration" : 14180
+          "start" : 1699541385610,
+          "stop" : 1699541394780,
+          "duration" : 9170
         }
       }, {
-        "uid" : "e9672c8478e1b486",
-        "status" : "passed",
+        "uid" : "209a31d47fc75b3a",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable\n  (Session info: headless chrome=112.0.5615.165)",
         "time" : {
-          "start" : 1699536579933,
-          "stop" : 1699536593161,
-          "duration" : 13228
+          "start" : 1699537994481,
+          "stop" : 1699538001896,
+          "duration" : 7415
         }
       }, {
-        "uid" : "cf9c99651cbcfe1d",
+        "uid" : "736b8f18f1503488",
         "status" : "passed",
         "time" : {
-          "start" : 1699535460711,
-          "stop" : 1699535472684,
-          "duration" : 11973
+          "start" : 1699536570698,
+          "stop" : 1699536579014,
+          "duration" : 8316
+        }
+      }, {
+        "uid" : "65cf9db0290ab1d8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1699535452967,
+          "stop" : 1699535459794,
+          "duration" : 6827
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "38b5af50b4a9e24e.json",
+  "source" : "3ae40b8d8dde7857.json",
   "parameterValues" : [ ]
 }
