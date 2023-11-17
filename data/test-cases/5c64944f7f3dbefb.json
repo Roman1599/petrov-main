@@ -1,22 +1,22 @@
 {
-  "uid" : "a7ecfcda9911fdf5",
+  "uid" : "5c64944f7f3dbefb",
   "name" : "Change profile name",
   "fullName" : "tests.feature_profile_test.TestProfileFeature#test_change_profile_name",
   "historyId" : "42b4a115007c35c622675a0baedb491a",
   "time" : {
-    "start" : 1700225448668,
-    "stop" : 1700225460109,
-    "duration" : 11441
+    "start" : 1700228123611,
+    "stop" : 1700228136437,
+    "duration" : 12826
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "driver",
+    "name" : "setup",
     "time" : {
-      "start" : 1700225447780,
-      "stop" : 1700225448668,
-      "duration" : 888
+      "start" : 1700228123611,
+      "stop" : 1700228123611,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "setup",
+    "name" : "driver",
     "time" : {
-      "start" : 1700225448668,
-      "stop" : 1700225448668,
-      "duration" : 0
+      "start" : 1700228122730,
+      "stop" : 1700228123611,
+      "duration" : 881
     },
     "status" : "passed",
     "steps" : [ ],
@@ -47,9 +47,9 @@
     "steps" : [ {
       "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/auth/login page",
       "time" : {
-        "start" : 1700225448668,
-        "stop" : 1700225450100,
-        "duration" : 1432
+        "start" : 1700228123611,
+        "stop" : 1700228125897,
+        "duration" : 2286
       },
       "status" : "passed",
       "steps" : [ ],
@@ -62,9 +62,9 @@
     }, {
       "name" : "Enter login",
       "time" : {
-        "start" : 1700225450100,
-        "stop" : 1700225451154,
-        "duration" : 1054
+        "start" : 1700228125897,
+        "stop" : 1700228126952,
+        "duration" : 1055
       },
       "status" : "passed",
       "steps" : [ ],
@@ -80,8 +80,8 @@
     }, {
       "name" : "Enter password",
       "time" : {
-        "start" : 1700225451154,
-        "stop" : 1700225451221,
+        "start" : 1700228126952,
+        "stop" : 1700228127019,
         "duration" : 67
       },
       "status" : "passed",
@@ -98,9 +98,9 @@
     }, {
       "name" : "Click submit",
       "time" : {
-        "start" : 1700225451221,
-        "stop" : 1700225451265,
-        "duration" : 44
+        "start" : 1700228127019,
+        "stop" : 1700228127060,
+        "duration" : 41
       },
       "status" : "passed",
       "steps" : [ ],
@@ -113,9 +113,9 @@
     }, {
       "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index is opened",
       "time" : {
-        "start" : 1700225451265,
-        "stop" : 1700225452115,
-        "duration" : 850
+        "start" : 1700228127060,
+        "stop" : 1700228128053,
+        "duration" : 993
       },
       "status" : "passed",
       "steps" : [ ],
@@ -128,9 +128,9 @@
     }, {
       "name" : "Click on 'My info' link",
       "time" : {
-        "start" : 1700225452115,
-        "stop" : 1700225453717,
-        "duration" : 1602
+        "start" : 1700228128053,
+        "stop" : 1700228129892,
+        "duration" : 1839
       },
       "status" : "passed",
       "steps" : [ ],
@@ -143,9 +143,9 @@
     }, {
       "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/7 is opened",
       "time" : {
-        "start" : 1700225453717,
-        "stop" : 1700225453720,
-        "duration" : 3
+        "start" : 1700228129892,
+        "stop" : 1700228129894,
+        "duration" : 2
       },
       "status" : "passed",
       "steps" : [ ],
@@ -158,17 +158,17 @@
     }, {
       "name" : "Change name",
       "time" : {
-        "start" : 1700225453720,
-        "stop" : 1700225454844,
-        "duration" : 1124
+        "start" : 1700228129894,
+        "stop" : 1700228130999,
+        "duration" : 1105
       },
       "status" : "passed",
       "steps" : [ {
-        "name" : "Change name on 'Test 50'",
+        "name" : "Change name on 'Test 96'",
         "time" : {
-          "start" : 1700225453720,
-          "stop" : 1700225454844,
-          "duration" : 1124
+          "start" : 1700228129894,
+          "stop" : 1700228130999,
+          "duration" : 1105
         },
         "status" : "passed",
         "steps" : [ ],
@@ -182,7 +182,7 @@
       "attachments" : [ ],
       "parameters" : [ {
         "name" : "new_name",
-        "value" : "'Test 50'"
+        "value" : "'Test 96'"
       } ],
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
@@ -191,9 +191,9 @@
     }, {
       "name" : "Save name",
       "time" : {
-        "start" : 1700225454844,
-        "stop" : 1700225454895,
-        "duration" : 51
+        "start" : 1700228130999,
+        "stop" : 1700228131210,
+        "duration" : 211
       },
       "status" : "passed",
       "steps" : [ ],
@@ -206,9 +206,9 @@
     }, {
       "name" : "Check changes",
       "time" : {
-        "start" : 1700225454895,
-        "stop" : 1700225457963,
-        "duration" : 3068
+        "start" : 1700228131210,
+        "stop" : 1700228134276,
+        "duration" : 3066
       },
       "status" : "passed",
       "steps" : [ ],
@@ -220,11 +220,11 @@
       "hasContent" : false
     } ],
     "attachments" : [ {
-      "uid" : "e5c4837cd520d19a",
+      "uid" : "714f47e7b75abb2d",
       "name" : "Success",
-      "source" : "e5c4837cd520d19a.png",
+      "source" : "714f47e7b75abb2d.png",
       "type" : "image/png",
-      "size" : 164264
+      "size" : 177463
     } ],
     "parameters" : [ ],
     "attachmentsCount" : 1,
@@ -235,8 +235,8 @@
   "afterStages" : [ {
     "name" : "driver::0",
     "time" : {
-      "start" : 1700225460110,
-      "stop" : 1700225460195,
+      "start" : 1700228136438,
+      "stop" : 1700228136523,
       "duration" : 85
     },
     "status" : "passed",
@@ -265,7 +265,7 @@
     "value" : "TestProfileFeature"
   }, {
     "name" : "host",
-    "value" : "74ae23afd568"
+    "value" : "808016b1db04"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -295,11 +295,19 @@
         "failed" : 0,
         "broken" : 2,
         "skipped" : 0,
-        "passed" : 50,
+        "passed" : 51,
         "unknown" : 0,
-        "total" : 52
+        "total" : 53
       },
       "items" : [ {
+        "uid" : "a7ecfcda9911fdf5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1700225448668,
+          "stop" : 1700225460109,
+          "duration" : 11441
+        }
+      }, {
         "uid" : "f3f656fd7433bf40",
         "status" : "passed",
         "time" : {
@@ -451,18 +459,10 @@
           "stop" : 1699896938732,
           "duration" : 11711
         }
-      }, {
-        "uid" : "b64a18c9357add72",
-        "status" : "passed",
-        "time" : {
-          "start" : 1699893575844,
-          "stop" : 1699893588790,
-          "duration" : 12946
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "a7ecfcda9911fdf5.json",
+  "source" : "5c64944f7f3dbefb.json",
   "parameterValues" : [ ]
 }
