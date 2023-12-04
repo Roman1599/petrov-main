@@ -1,70 +1,70 @@
 {
-  "uid" : "efaf00060a8795d8",
+  "uid" : "bf32fe9fc5c362df",
   "name" : "Add employee",
   "fullName" : "tests.feature_profile_test.TestProfileFeature#test_add_employee",
   "historyId" : "7cc231a3811eb8493b8be6f2ed2e7892",
   "time" : {
-    "start" : 1701694277950,
-    "stop" : 1701694291925,
-    "duration" : 13975
+    "start" : 1701696955898,
+    "stop" : 1701696970257,
+    "duration" : 14359
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "setup",
-    "time" : {
-      "start" : 1701694277949,
-      "stop" : 1701694277949,
-      "duration" : 0
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
-  }, {
     "name" : "driver",
     "time" : {
-      "start" : 1701694277131,
-      "stop" : 1701694277949,
-      "duration" : 818
+      "start" : 1701696955080,
+      "stop" : 1701696955897,
+      "duration" : 817
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "setup",
+    "time" : {
+      "start" : 1701696955897,
+      "stop" : 1701696955898,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
       "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/auth/login page",
       "time" : {
-        "start" : 1701694277950,
-        "stop" : 1701694280121,
-        "duration" : 2171
+        "start" : 1701696955898,
+        "stop" : 1701696958076,
+        "duration" : 2178
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 0,
-      "hasContent" : false,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
     }, {
       "name" : "Enter login",
       "time" : {
-        "start" : 1701694280121,
-        "stop" : 1701694281176,
-        "duration" : 1055
+        "start" : 1701696958076,
+        "stop" : 1701696959132,
+        "duration" : 1056
       },
       "status" : "passed",
       "steps" : [ ],
@@ -73,16 +73,16 @@
         "name" : "login",
         "value" : "'Admin'"
       } ],
-      "stepsCount" : 0,
-      "hasContent" : true,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
     }, {
       "name" : "Enter password",
       "time" : {
-        "start" : 1701694281176,
-        "stop" : 1701694281239,
-        "duration" : 63
+        "start" : 1701696959132,
+        "stop" : 1701696959200,
+        "duration" : 68
       },
       "status" : "passed",
       "steps" : [ ],
@@ -91,91 +91,91 @@
         "name" : "password",
         "value" : "'admin123'"
       } ],
-      "stepsCount" : 0,
-      "hasContent" : true,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
     }, {
       "name" : "Click submit",
       "time" : {
-        "start" : 1701694281239,
-        "stop" : 1701694281287,
-        "duration" : 48
+        "start" : 1701696959200,
+        "stop" : 1701696959242,
+        "duration" : 42
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 0,
-      "hasContent" : false,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
     }, {
       "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index is opened",
       "time" : {
-        "start" : 1701694281287,
-        "stop" : 1701694282294,
-        "duration" : 1007
+        "start" : 1701696959242,
+        "stop" : 1701696960314,
+        "duration" : 1072
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 0,
-      "hasContent" : false,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
     }, {
       "name" : "Click on 'Pim' link",
       "time" : {
-        "start" : 1701694282294,
-        "stop" : 1701694284157,
-        "duration" : 1863
+        "start" : 1701696960314,
+        "stop" : 1701696962445,
+        "duration" : 2131
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 0,
-      "hasContent" : false,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
     }, {
       "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList is opened",
       "time" : {
-        "start" : 1701694284157,
-        "stop" : 1701694284159,
+        "start" : 1701696962446,
+        "stop" : 1701696962448,
         "duration" : 2
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 0,
-      "hasContent" : false,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
     }, {
       "name" : "Click click add emloyee",
       "time" : {
-        "start" : 1701694284159,
-        "stop" : 1701694285582,
-        "duration" : 1423
+        "start" : 1701696962448,
+        "stop" : 1701696963936,
+        "duration" : 1488
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 0,
-      "hasContent" : false,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
     }, {
       "name" : "Fill fields",
       "time" : {
-        "start" : 1701694285582,
-        "stop" : 1701694286716,
-        "duration" : 1134
+        "start" : 1701696963936,
+        "stop" : 1701696965054,
+        "duration" : 1118
       },
       "status" : "passed",
       "steps" : [ ],
@@ -187,61 +187,61 @@
         "name" : "new_value_sec",
         "value" : "'Suarez'"
       } ],
-      "stepsCount" : 0,
-      "hasContent" : true,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
     }, {
       "name" : "Click Save button",
       "time" : {
-        "start" : 1701694289716,
-        "stop" : 1701694289761,
-        "duration" : 45
+        "start" : 1701696968054,
+        "stop" : 1701696968100,
+        "duration" : 46
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 0,
-      "hasContent" : false,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
     } ],
     "attachments" : [ {
-      "uid" : "49824c6a3bf12ba0",
+      "uid" : "d2c7a685d18e8bfb",
       "name" : "Add employee success",
-      "source" : "49824c6a3bf12ba0.png",
+      "source" : "d2c7a685d18e8bfb.png",
       "type" : "image/png",
-      "size" : 104017
+      "size" : 103878
     } ],
     "parameters" : [ ],
-    "stepsCount" : 10,
-    "hasContent" : true,
     "attachmentsCount" : 1,
-    "shouldDisplayMessage" : false
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 10,
+    "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "driver::0",
     "time" : {
-      "start" : 1701694291926,
-      "stop" : 1701694291983,
-      "duration" : 57
+      "start" : 1701696970257,
+      "stop" : 1701696970315,
+      "duration" : 58
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "severity",
-    "value" : "Critical"
-  }, {
     "name" : "feature",
     "value" : "Profile Functionaloty"
+  }, {
+    "name" : "severity",
+    "value" : "Critical"
   }, {
     "name" : "parentSuite",
     "value" : "tests"
@@ -253,7 +253,7 @@
     "value" : "TestProfileFeature"
   }, {
     "name" : "host",
-    "value" : "50c34b8b12ea"
+    "value" : "b82422dc7625"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -283,11 +283,19 @@
         "failed" : 0,
         "broken" : 8,
         "skipped" : 0,
-        "passed" : 110,
+        "passed" : 111,
         "unknown" : 0,
-        "total" : 118
+        "total" : 119
       },
       "items" : [ {
+        "uid" : "efaf00060a8795d8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1701694277950,
+          "stop" : 1701694291925,
+          "duration" : 13975
+        }
+      }, {
         "uid" : "401cf59429ac5113",
         "status" : "passed",
         "time" : {
@@ -441,18 +449,10 @@
           "stop" : 1701192979056,
           "duration" : 13012
         }
-      }, {
-        "uid" : "4f25d9c370dae494",
-        "status" : "passed",
-        "time" : {
-          "start" : 1701189633409,
-          "stop" : 1701189647466,
-          "duration" : 14057
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "efaf00060a8795d8.json",
+  "source" : "bf32fe9fc5c362df.json",
   "parameterValues" : [ ]
 }
