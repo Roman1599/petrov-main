@@ -1,22 +1,22 @@
 {
-  "uid" : "f648dad1880a0006",
+  "uid" : "5b71ff16d62a4463",
   "name" : "Search assistant",
   "fullName" : "tests.feature_profile_test.TestProfileFeature#test_search_assistant",
   "historyId" : "5072212cbe0f70fbe444f2ea8b1ce8c7",
   "time" : {
-    "start" : 1702474577645,
-    "stop" : 1702474587723,
-    "duration" : 10078
+    "start" : 1702478230999,
+    "stop" : 1702478241100,
+    "duration" : 10101
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "setup",
+    "name" : "driver",
     "time" : {
-      "start" : 1702474577644,
-      "stop" : 1702474577645,
-      "duration" : 1
+      "start" : 1702478230178,
+      "stop" : 1702478230998,
+      "duration" : 820
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "driver",
+    "name" : "setup",
     "time" : {
-      "start" : 1702474576836,
-      "stop" : 1702474577644,
-      "duration" : 808
+      "start" : 1702478230999,
+      "stop" : 1702478230999,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -47,9 +47,9 @@
     "steps" : [ {
       "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/auth/login page",
       "time" : {
-        "start" : 1702474577645,
-        "stop" : 1702474579012,
-        "duration" : 1367
+        "start" : 1702478230999,
+        "stop" : 1702478232402,
+        "duration" : 1403
       },
       "status" : "passed",
       "steps" : [ ],
@@ -62,9 +62,9 @@
     }, {
       "name" : "Enter login",
       "time" : {
-        "start" : 1702474579012,
-        "stop" : 1702474580066,
-        "duration" : 1054
+        "start" : 1702478232402,
+        "stop" : 1702478233459,
+        "duration" : 1057
       },
       "status" : "passed",
       "steps" : [ ],
@@ -80,9 +80,9 @@
     }, {
       "name" : "Enter password",
       "time" : {
-        "start" : 1702474580066,
-        "stop" : 1702474580132,
-        "duration" : 66
+        "start" : 1702478233459,
+        "stop" : 1702478233531,
+        "duration" : 72
       },
       "status" : "passed",
       "steps" : [ ],
@@ -98,8 +98,8 @@
     }, {
       "name" : "Click submit",
       "time" : {
-        "start" : 1702474580132,
-        "stop" : 1702474580177,
+        "start" : 1702478233531,
+        "stop" : 1702478233576,
         "duration" : 45
       },
       "status" : "passed",
@@ -113,8 +113,8 @@
     }, {
       "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index is opened",
       "time" : {
-        "start" : 1702474580177,
-        "stop" : 1702474581017,
+        "start" : 1702478233576,
+        "stop" : 1702478234416,
         "duration" : 840
       },
       "status" : "passed",
@@ -128,9 +128,9 @@
     }, {
       "name" : "Click on 'Directory' link",
       "time" : {
-        "start" : 1702474581017,
-        "stop" : 1702474582405,
-        "duration" : 1388
+        "start" : 1702478234416,
+        "stop" : 1702478235787,
+        "duration" : 1371
       },
       "status" : "passed",
       "steps" : [ ],
@@ -143,8 +143,8 @@
     }, {
       "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/directory/viewDirectory is opened",
       "time" : {
-        "start" : 1702474582405,
-        "stop" : 1702474582408,
+        "start" : 1702478235787,
+        "stop" : 1702478235790,
         "duration" : 3
       },
       "status" : "passed",
@@ -158,9 +158,9 @@
     }, {
       "name" : "Add fields",
       "time" : {
-        "start" : 1702474582408,
-        "stop" : 1702474585524,
-        "duration" : 3116
+        "start" : 1702478235790,
+        "stop" : 1702478238912,
+        "duration" : 3122
       },
       "status" : "passed",
       "steps" : [ ],
@@ -176,9 +176,9 @@
     }, {
       "name" : "Click on Post button",
       "time" : {
-        "start" : 1702474585524,
-        "stop" : 1702474585568,
-        "duration" : 44
+        "start" : 1702478238912,
+        "stop" : 1702478238959,
+        "duration" : 47
       },
       "status" : "passed",
       "steps" : [ ],
@@ -190,11 +190,11 @@
       "hasContent" : false
     } ],
     "attachments" : [ {
-      "uid" : "f2c763b4250a8f6e",
+      "uid" : "c5d07d2b7dd86c05",
       "name" : "Search success",
-      "source" : "f2c763b4250a8f6e.png",
+      "source" : "c5d07d2b7dd86c05.png",
       "type" : "image/png",
-      "size" : 122450
+      "size" : 97659
     } ],
     "parameters" : [ ],
     "attachmentsCount" : 1,
@@ -205,9 +205,9 @@
   "afterStages" : [ {
     "name" : "driver::0",
     "time" : {
-      "start" : 1702474587724,
-      "stop" : 1702474587781,
-      "duration" : 57
+      "start" : 1702478241101,
+      "stop" : 1702478241159,
+      "duration" : 58
     },
     "status" : "passed",
     "steps" : [ ],
@@ -235,7 +235,7 @@
     "value" : "TestProfileFeature"
   }, {
     "name" : "host",
-    "value" : "ec41b1aece6b"
+    "value" : "ea35bbc3c601"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -265,11 +265,19 @@
         "failed" : 0,
         "broken" : 14,
         "skipped" : 0,
-        "passed" : 147,
+        "passed" : 148,
         "unknown" : 0,
-        "total" : 161
+        "total" : 162
       },
       "items" : [ {
+        "uid" : "f648dad1880a0006",
+        "status" : "passed",
+        "time" : {
+          "start" : 1702474577645,
+          "stop" : 1702474587723,
+          "duration" : 10078
+        }
+      }, {
         "uid" : "e11e3c963ec0bdcc",
         "status" : "passed",
         "time" : {
@@ -422,18 +430,10 @@
           "stop" : 1702039855087,
           "duration" : 16042
         }
-      }, {
-        "uid" : "111d7ac6e6f070ab",
-        "status" : "passed",
-        "time" : {
-          "start" : 1701970573714,
-          "stop" : 1701970584588,
-          "duration" : 10874
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "f648dad1880a0006.json",
+  "source" : "5b71ff16d62a4463.json",
   "parameterValues" : [ ]
 }
