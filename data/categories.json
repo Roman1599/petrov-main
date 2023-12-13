@@ -1,5 +1,26 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable\n  (Session info: headless chrome=112.0.5615.165)",
+      "children" : [ {
+        "name" : "Post random information",
+        "uid" : "c761ceb2972ea424",
+        "parentUid" : "f765455269c6fb0df6a00984b39faa5f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1702481778125,
+          "stop" : 1702481785080,
+          "duration" : 6955
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f765455269c6fb0df6a00984b39faa5f"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
   "name" : "categories"
 }
