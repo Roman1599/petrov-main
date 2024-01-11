@@ -1,0 +1,401 @@
+{
+  "uid" : "4c5c70e839d2f213",
+  "name" : "Post random information",
+  "fullName" : "tests.feature_profile_test.TestProfileFeature#test_post",
+  "historyId" : "028bb0f23aa13d60158934f7f2b84f0f",
+  "time" : {
+    "start" : 1704991230671,
+    "stop" : 1704991244237,
+    "duration" : 13566
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message:",
+  "statusTrace" : "self = <feature_profile_test.TestProfileFeature object at 0x7f369d194a70>\n\n    @allure.title(\"Post random information\")\n    @allure.severity(\"Critical\")\n    def test_post(self):\n        self.login_page.open()\n        self.login_page.enter_login(self.data.LOGIN)\n        self.login_page.enter_password(self.data.PASSWORD)\n        self.login_page.click_submit_button()\n        self.dashboard_page.is_opened()\n>       self.dashboard_page.click_buzz()\n\ntests/feature_profile_test.py:51: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/dashboard_page.py:21: in click_buzz\n    self.wait.until(EC.element_to_be_clickable(self.BUZZ_BUTTON)).click()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"0d923764140af679ac0078fd603f17da\")>\nmethod = <function element_to_be_clickable.<locals>._predicate at 0x7f369d2294e0>\nmessage = ''\n\n    def until(self, method: Callable[[WebDriver], Union[Literal[False], T]], message: str = \"\") -> T:\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n../local/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:101: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setup",
+    "time" : {
+      "start" : 1704991230671,
+      "stop" : 1704991230671,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1704991229853,
+      "stop" : 1704991230671,
+      "duration" : 818
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message:",
+    "statusTrace" : "self = <feature_profile_test.TestProfileFeature object at 0x7f369d194a70>\n\n    @allure.title(\"Post random information\")\n    @allure.severity(\"Critical\")\n    def test_post(self):\n        self.login_page.open()\n        self.login_page.enter_login(self.data.LOGIN)\n        self.login_page.enter_password(self.data.PASSWORD)\n        self.login_page.click_submit_button()\n        self.dashboard_page.is_opened()\n>       self.dashboard_page.click_buzz()\n\ntests/feature_profile_test.py:51: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/dashboard_page.py:21: in click_buzz\n    self.wait.until(EC.element_to_be_clickable(self.BUZZ_BUTTON)).click()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"0d923764140af679ac0078fd603f17da\")>\nmethod = <function element_to_be_clickable.<locals>._predicate at 0x7f369d2294e0>\nmessage = ''\n\n    def until(self, method: Callable[[WebDriver], Union[Literal[False], T]], message: str = \"\") -> T:\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n../local/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:101: TimeoutException",
+    "steps" : [ {
+      "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/auth/login page",
+      "time" : {
+        "start" : 1704991230671,
+        "stop" : 1704991232075,
+        "duration" : 1404
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Enter login",
+      "time" : {
+        "start" : 1704991232075,
+        "stop" : 1704991233131,
+        "duration" : 1056
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "login",
+        "value" : "'Admin'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Enter password",
+      "time" : {
+        "start" : 1704991233131,
+        "stop" : 1704991233195,
+        "duration" : 64
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "password",
+        "value" : "'admin123'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click submit",
+      "time" : {
+        "start" : 1704991233195,
+        "stop" : 1704991233244,
+        "duration" : 49
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index is opened",
+      "time" : {
+        "start" : 1704991233244,
+        "stop" : 1704991234175,
+        "duration" : 931
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Click on 'Buzz' link",
+      "time" : {
+        "start" : 1704991234175,
+        "stop" : 1704991244236,
+        "duration" : 10061
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \n\n",
+      "statusTrace" : "  File \"/usr/local/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/usr/workspace/pages/dashboard_page.py\", line 21, in click_buzz\n    self.wait.until(EC.element_to_be_clickable(self.BUZZ_BUTTON)).click()\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 101, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 6,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1704991244242,
+      "stop" : 1704991244299,
+      "duration" : 57
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Profile Functionaloty"
+  }, {
+    "name" : "severity",
+    "value" : "Critical"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "feature_profile_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProfileFeature"
+  }, {
+    "name" : "host",
+    "value" : "078faeb0f4b9"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.feature_profile_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 42,
+        "skipped" : 0,
+        "passed" : 247,
+        "unknown" : 0,
+        "total" : 289
+      },
+      "items" : [ {
+        "uid" : "efe9980dc83d2242",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\n  (Session info: headless chrome=112.0.5615.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception",
+        "time" : {
+          "start" : 1704987366018,
+          "stop" : 1704987373007,
+          "duration" : 6989
+        }
+      }, {
+        "uid" : "8af1b3a756a39c11",
+        "status" : "passed",
+        "time" : {
+          "start" : 1704983792966,
+          "stop" : 1704983801247,
+          "duration" : 8281
+        }
+      }, {
+        "uid" : "927d6947c9a42002",
+        "status" : "passed",
+        "time" : {
+          "start" : 1704980144572,
+          "stop" : 1704980153637,
+          "duration" : 9065
+        }
+      }, {
+        "uid" : "b240e51d1e826841",
+        "status" : "passed",
+        "time" : {
+          "start" : 1704977462689,
+          "stop" : 1704977471165,
+          "duration" : 8476
+        }
+      }, {
+        "uid" : "98e8282e1cac2450",
+        "status" : "passed",
+        "time" : {
+          "start" : 1704908155708,
+          "stop" : 1704908164033,
+          "duration" : 8325
+        }
+      }, {
+        "uid" : "6e6bae3af9bb766e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1704904773033,
+          "stop" : 1704904781440,
+          "duration" : 8407
+        }
+      }, {
+        "uid" : "e3f18d7acb9c80a1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1704900943260,
+          "stop" : 1704900951576,
+          "duration" : 8316
+        }
+      }, {
+        "uid" : "d733b5c434e3b088",
+        "status" : "passed",
+        "time" : {
+          "start" : 1704897390895,
+          "stop" : 1704897400276,
+          "duration" : 9381
+        }
+      }, {
+        "uid" : "90c5e57a2d454c61",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\n  (Session info: headless chrome=112.0.5615.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception",
+        "time" : {
+          "start" : 1704893749054,
+          "stop" : 1704893756203,
+          "duration" : 7149
+        }
+      }, {
+        "uid" : "883c8eca146117e6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1704891052767,
+          "stop" : 1704891061331,
+          "duration" : 8564
+        }
+      }, {
+        "uid" : "9cf1bbb15dfd0fe9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1704821754493,
+          "stop" : 1704821763625,
+          "duration" : 9132
+        }
+      }, {
+        "uid" : "42179845a194374b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1704814569475,
+          "stop" : 1704814578943,
+          "duration" : 9468
+        }
+      }, {
+        "uid" : "2bb93bfd0e87221",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable\n  (Session info: headless chrome=112.0.5615.165)",
+        "time" : {
+          "start" : 1704811000551,
+          "stop" : 1704811006769,
+          "duration" : 6218
+        }
+      }, {
+        "uid" : "e83026a26c29aa45",
+        "status" : "passed",
+        "time" : {
+          "start" : 1704807665157,
+          "stop" : 1704807673209,
+          "duration" : 8052
+        }
+      }, {
+        "uid" : "1e72ed371592b6b9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1704804785348,
+          "stop" : 1704804793543,
+          "duration" : 8195
+        }
+      }, {
+        "uid" : "22849730ef69cb3f",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\n  (Session info: headless chrome=112.0.5615.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception",
+        "time" : {
+          "start" : 1704735348732,
+          "stop" : 1704735355763,
+          "duration" : 7031
+        }
+      }, {
+        "uid" : "67821e24aad1d846",
+        "status" : "passed",
+        "time" : {
+          "start" : 1704732037053,
+          "stop" : 1704732045425,
+          "duration" : 8372
+        }
+      }, {
+        "uid" : "ec4338df414750b6",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\n  (Session info: headless chrome=112.0.5615.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception",
+        "time" : {
+          "start" : 1704728176160,
+          "stop" : 1704728183081,
+          "duration" : 6921
+        }
+      }, {
+        "uid" : "cd364fb7639f9f31",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\n  (Session info: headless chrome=112.0.5615.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception",
+        "time" : {
+          "start" : 1704724594332,
+          "stop" : 1704724602472,
+          "duration" : 8140
+        }
+      }, {
+        "uid" : "ab5cc98842e3c2ea",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\n  (Session info: headless chrome=112.0.5615.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception",
+        "time" : {
+          "start" : 1704720940017,
+          "stop" : 1704720947084,
+          "duration" : 7067
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "4c5c70e839d2f213.json",
+  "parameterValues" : [ ]
+}
