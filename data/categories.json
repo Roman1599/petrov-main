@@ -3,39 +3,22 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "selenium.common.exceptions.TimeoutException: Message:",
-      "children" : [ {
-        "name" : "Change profile name",
-        "uid" : "35e2f5e483b12f89",
-        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
-        "status" : "broken",
-        "time" : {
-          "start" : 1705584921212,
-          "stop" : 1705584943549,
-          "duration" : 22337
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "31bb78a6a95ede3f78b260ed048910d8"
-    }, {
-      "name" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\n  (Session info: headless chrome=112.0.5615.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception",
+      "name" : "selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable\n  (Session info: headless chrome=112.0.5615.165)",
       "children" : [ {
         "name" : "Post random information",
-        "uid" : "d111ef7b1bbb2d47",
-        "parentUid" : "d39bf102e1e5bf5134ee723b8fd3f516",
+        "uid" : "d99a5d18530c3f0",
+        "parentUid" : "f765455269c6fb0df6a00984b39faa5f",
         "status" : "broken",
         "time" : {
-          "start" : 1705584959126,
-          "stop" : 1705584966556,
-          "duration" : 7430
+          "start" : 1705588581413,
+          "stop" : 1705588587411,
+          "duration" : 5998
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "d39bf102e1e5bf5134ee723b8fd3f516"
+      "uid" : "f765455269c6fb0df6a00984b39faa5f"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
