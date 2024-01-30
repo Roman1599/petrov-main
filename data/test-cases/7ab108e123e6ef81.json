@@ -1,12 +1,12 @@
 {
-  "uid" : "64300697d9a15e39",
-  "name" : "Change profile name",
-  "fullName" : "tests.feature_profile_test.TestProfileFeature#test_change_profile_name",
-  "historyId" : "42b4a115007c35c622675a0baedb491a",
+  "uid" : "7ab108e123e6ef81",
+  "name" : "Add employee",
+  "fullName" : "tests.feature_profile_test.TestProfileFeature#test_add_employee",
+  "historyId" : "7cc231a3811eb8493b8be6f2ed2e7892",
   "time" : {
-    "start" : 1706618734058,
-    "stop" : 1706618747346,
-    "duration" : 13288
+    "start" : 1706621798206,
+    "stop" : 1706621813213,
+    "duration" : 15007
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,8 +14,8 @@
   "beforeStages" : [ {
     "name" : "setup",
     "time" : {
-      "start" : 1706618734057,
-      "stop" : 1706618734057,
+      "start" : 1706621798205,
+      "stop" : 1706621798205,
       "duration" : 0
     },
     "status" : "passed",
@@ -29,9 +29,9 @@
   }, {
     "name" : "driver",
     "time" : {
-      "start" : 1706618733116,
-      "stop" : 1706618734057,
-      "duration" : 941
+      "start" : 1706621797386,
+      "stop" : 1706621798205,
+      "duration" : 819
     },
     "status" : "passed",
     "steps" : [ ],
@@ -47,9 +47,9 @@
     "steps" : [ {
       "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/auth/login page",
       "time" : {
-        "start" : 1706618734058,
-        "stop" : 1706618736331,
-        "duration" : 2273
+        "start" : 1706621798206,
+        "stop" : 1706621800430,
+        "duration" : 2224
       },
       "status" : "passed",
       "steps" : [ ],
@@ -62,9 +62,9 @@
     }, {
       "name" : "Enter login",
       "time" : {
-        "start" : 1706618736331,
-        "stop" : 1706618737386,
-        "duration" : 1055
+        "start" : 1706621800430,
+        "stop" : 1706621801486,
+        "duration" : 1056
       },
       "status" : "passed",
       "steps" : [ ],
@@ -80,9 +80,9 @@
     }, {
       "name" : "Enter password",
       "time" : {
-        "start" : 1706618737386,
-        "stop" : 1706618737450,
-        "duration" : 64
+        "start" : 1706621801486,
+        "stop" : 1706621801558,
+        "duration" : 72
       },
       "status" : "passed",
       "steps" : [ ],
@@ -98,9 +98,9 @@
     }, {
       "name" : "Click submit",
       "time" : {
-        "start" : 1706618737450,
-        "stop" : 1706618737498,
-        "duration" : 48
+        "start" : 1706621801558,
+        "stop" : 1706621801599,
+        "duration" : 41
       },
       "status" : "passed",
       "steps" : [ ],
@@ -113,9 +113,9 @@
     }, {
       "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index is opened",
       "time" : {
-        "start" : 1706618737498,
-        "stop" : 1706618738509,
-        "duration" : 1011
+        "start" : 1706621801599,
+        "stop" : 1706621802756,
+        "duration" : 1157
       },
       "status" : "passed",
       "steps" : [ ],
@@ -126,11 +126,11 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Click on 'My info' link",
+      "name" : "Click on 'Pim' link",
       "time" : {
-        "start" : 1706618738509,
-        "stop" : 1706618740704,
-        "duration" : 2195
+        "start" : 1706621802756,
+        "stop" : 1706621805147,
+        "duration" : 2391
       },
       "status" : "passed",
       "steps" : [ ],
@@ -141,11 +141,11 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/7 is opened",
+      "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList is opened",
       "time" : {
-        "start" : 1706618740704,
-        "stop" : 1706618740707,
-        "duration" : 3
+        "start" : 1706621805147,
+        "stop" : 1706621805149,
+        "duration" : 2
       },
       "status" : "passed",
       "steps" : [ ],
@@ -156,59 +156,47 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Change name",
+      "name" : "Click click add emloyee",
       "time" : {
-        "start" : 1706618740707,
-        "stop" : 1706618741804,
-        "duration" : 1097
+        "start" : 1706621805149,
+        "stop" : 1706621806892,
+        "duration" : 1743
       },
       "status" : "passed",
-      "steps" : [ {
-        "name" : "Change name on 'Test 52'",
-        "time" : {
-          "start" : 1706618740707,
-          "stop" : 1706618741804,
-          "duration" : 1097
-        },
-        "status" : "passed",
-        "steps" : [ ],
-        "attachments" : [ ],
-        "parameters" : [ ],
-        "attachmentsCount" : 0,
-        "shouldDisplayMessage" : false,
-        "stepsCount" : 0,
-        "hasContent" : false
-      } ],
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Fill fields",
+      "time" : {
+        "start" : 1706621806892,
+        "stop" : 1706621808017,
+        "duration" : 1125
+      },
+      "status" : "passed",
+      "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ {
-        "name" : "new_name",
-        "value" : "'Test 52'"
+        "name" : "new_value_fir",
+        "value" : "'Luis'"
+      }, {
+        "name" : "new_value_sec",
+        "value" : "'Suarez'"
       } ],
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "stepsCount" : 1,
+      "stepsCount" : 0,
       "hasContent" : true
     }, {
-      "name" : "Save name",
+      "name" : "Click Save button",
       "time" : {
-        "start" : 1706618741804,
-        "stop" : 1706618742132,
-        "duration" : 328
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "stepsCount" : 0,
-      "hasContent" : false
-    }, {
-      "name" : "Check changes",
-      "time" : {
-        "start" : 1706618742132,
-        "stop" : 1706618745200,
-        "duration" : 3068
+        "start" : 1706621811017,
+        "stop" : 1706621811062,
+        "duration" : 45
       },
       "status" : "passed",
       "steps" : [ ],
@@ -220,24 +208,24 @@
       "hasContent" : false
     } ],
     "attachments" : [ {
-      "uid" : "2cd178235594420c",
-      "name" : "Success",
-      "source" : "2cd178235594420c.png",
+      "uid" : "984bcee5186de49",
+      "name" : "Add employee success",
+      "source" : "984bcee5186de49.png",
       "type" : "image/png",
-      "size" : 165730
+      "size" : 102392
     } ],
     "parameters" : [ ],
     "attachmentsCount" : 1,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 11,
+    "stepsCount" : 10,
     "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "driver::0",
     "time" : {
-      "start" : 1706618747347,
-      "stop" : 1706618747432,
-      "duration" : 85
+      "start" : 1706621813214,
+      "stop" : 1706621813271,
+      "duration" : 57
     },
     "status" : "passed",
     "steps" : [ ],
@@ -265,7 +253,7 @@
     "value" : "TestProfileFeature"
   }, {
     "name" : "host",
-    "value" : "9d83dbc73ecd"
+    "value" : "85ad191f7704"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -293,176 +281,176 @@
     "history" : {
       "statistic" : {
         "failed" : 0,
-        "broken" : 43,
+        "broken" : 26,
         "skipped" : 0,
-        "passed" : 320,
+        "passed" : 338,
         "unknown" : 0,
-        "total" : 363
+        "total" : 364
       },
       "items" : [ {
-        "uid" : "606a818b52d6ae3f",
+        "uid" : "f1df3132bc342ae0",
         "status" : "passed",
         "time" : {
-          "start" : 1706549713519,
-          "stop" : 1706549725468,
-          "duration" : 11949
+          "start" : 1706618773326,
+          "stop" : 1706618787751,
+          "duration" : 14425
         }
       }, {
-        "uid" : "59d121205c49c019",
+        "uid" : "bad5c1cace389765",
         "status" : "passed",
         "time" : {
-          "start" : 1706546209516,
-          "stop" : 1706546221705,
-          "duration" : 12189
+          "start" : 1706549749084,
+          "stop" : 1706549762024,
+          "duration" : 12940
         }
       }, {
-        "uid" : "3c36fbb7b5660dfe",
+        "uid" : "a0aba5f1fce535f",
         "status" : "passed",
         "time" : {
-          "start" : 1706542511154,
-          "stop" : 1706542523930,
-          "duration" : 12776
+          "start" : 1706546246265,
+          "stop" : 1706546259995,
+          "duration" : 13730
         }
       }, {
-        "uid" : "648aa0aacb98c171",
+        "uid" : "54a994fe237aec75",
         "status" : "passed",
         "time" : {
-          "start" : 1706538918161,
-          "stop" : 1706538931292,
-          "duration" : 13131
+          "start" : 1706542547825,
+          "stop" : 1706542560920,
+          "duration" : 13095
         }
       }, {
-        "uid" : "3a7f9561ee46d531",
+        "uid" : "279fa5f04e9fb085",
         "status" : "passed",
         "time" : {
-          "start" : 1706535295783,
-          "stop" : 1706535310434,
-          "duration" : 14651
+          "start" : 1706538957530,
+          "stop" : 1706538972433,
+          "duration" : 14903
         }
       }, {
-        "uid" : "29b28d9bf489d797",
+        "uid" : "6e78332c7786c3b8",
         "status" : "passed",
         "time" : {
-          "start" : 1706532348545,
-          "stop" : 1706532361023,
-          "duration" : 12478
+          "start" : 1706535338695,
+          "stop" : 1706535352874,
+          "duration" : 14179
         }
       }, {
-        "uid" : "88295c9c65726533",
+        "uid" : "d8818cc70532af40",
         "status" : "passed",
         "time" : {
-          "start" : 1706290522912,
-          "stop" : 1706290534601,
-          "duration" : 11689
+          "start" : 1706532386250,
+          "stop" : 1706532399746,
+          "duration" : 13496
         }
       }, {
-        "uid" : "65aa7fe9c61fae4",
+        "uid" : "fb27ba0661716e3",
         "status" : "passed",
         "time" : {
-          "start" : 1706287011599,
-          "stop" : 1706287023577,
-          "duration" : 11978
+          "start" : 1706290558323,
+          "stop" : 1706290571442,
+          "duration" : 13119
         }
       }, {
-        "uid" : "cf2359fe1d61c481",
+        "uid" : "e59afa184fb81533",
         "status" : "passed",
         "time" : {
-          "start" : 1706283343661,
-          "stop" : 1706283355435,
-          "duration" : 11774
+          "start" : 1706287047874,
+          "stop" : 1706287061240,
+          "duration" : 13366
         }
       }, {
-        "uid" : "11621f5923b490e8",
+        "uid" : "db1faf823328feb9",
         "status" : "passed",
         "time" : {
-          "start" : 1706279724116,
-          "stop" : 1706279735856,
-          "duration" : 11740
+          "start" : 1706283379253,
+          "stop" : 1706283392692,
+          "duration" : 13439
         }
       }, {
-        "uid" : "ed15d810baefdf55",
+        "uid" : "cb0a29c48228cf35",
         "status" : "passed",
         "time" : {
-          "start" : 1706276098097,
-          "stop" : 1706276110191,
-          "duration" : 12094
+          "start" : 1706279757346,
+          "stop" : 1706279770612,
+          "duration" : 13266
         }
       }, {
-        "uid" : "b261d210800248f2",
+        "uid" : "819cb87323e91c5",
         "status" : "passed",
         "time" : {
-          "start" : 1706273179854,
-          "stop" : 1706273191957,
-          "duration" : 12103
+          "start" : 1706276134226,
+          "stop" : 1706276147247,
+          "duration" : 13021
         }
       }, {
-        "uid" : "41ab84c48e17fd6",
+        "uid" : "bea7450a403a823f",
         "status" : "passed",
         "time" : {
-          "start" : 1706204112752,
-          "stop" : 1706204124756,
-          "duration" : 12004
+          "start" : 1706273216564,
+          "stop" : 1706273229995,
+          "duration" : 13431
         }
       }, {
-        "uid" : "af4a7c073ff60a75",
+        "uid" : "8de494714965c0d9",
         "status" : "passed",
         "time" : {
-          "start" : 1706200904279,
-          "stop" : 1706200917387,
-          "duration" : 13108
+          "start" : 1706204148682,
+          "stop" : 1706204161696,
+          "duration" : 13014
         }
       }, {
-        "uid" : "7feca58feec0eec4",
+        "uid" : "32caa4f3d79f68ad",
         "status" : "passed",
         "time" : {
-          "start" : 1706196933521,
-          "stop" : 1706196945326,
-          "duration" : 11805
+          "start" : 1706200941143,
+          "stop" : 1706200955425,
+          "duration" : 14282
         }
       }, {
-        "uid" : "14dbd000040f42da",
+        "uid" : "1c570634e8d24048",
         "status" : "passed",
         "time" : {
-          "start" : 1706193396131,
-          "stop" : 1706193409119,
-          "duration" : 12988
+          "start" : 1706196969296,
+          "stop" : 1706196982431,
+          "duration" : 13135
         }
       }, {
-        "uid" : "275636c692a9e654",
+        "uid" : "8622889acce5ef7e",
         "status" : "passed",
         "time" : {
-          "start" : 1706189707380,
-          "stop" : 1706189721080,
-          "duration" : 13700
+          "start" : 1706193434180,
+          "stop" : 1706193447648,
+          "duration" : 13468
         }
       }, {
-        "uid" : "2fad9fa36807e25d",
+        "uid" : "fd1af6ad2d222a3",
         "status" : "passed",
         "time" : {
-          "start" : 1706187088282,
-          "stop" : 1706187100795,
-          "duration" : 12513
+          "start" : 1706189746720,
+          "stop" : 1706189761003,
+          "duration" : 14283
         }
       }, {
-        "uid" : "3f4580e22ca15e24",
+        "uid" : "2047e6d50622f9ec",
         "status" : "passed",
         "time" : {
-          "start" : 1706117721450,
-          "stop" : 1706117734507,
-          "duration" : 13057
+          "start" : 1706187125176,
+          "stop" : 1706187138717,
+          "duration" : 13541
         }
       }, {
-        "uid" : "2d5915bb520caffb",
+        "uid" : "2a99fa16dfc81243",
         "status" : "passed",
         "time" : {
-          "start" : 1706114427098,
-          "stop" : 1706114440470,
-          "duration" : 13372
+          "start" : 1706117758163,
+          "stop" : 1706117772425,
+          "duration" : 14262
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "64300697d9a15e39.json",
+  "source" : "7ab108e123e6ef81.json",
   "parameterValues" : [ ]
 }
