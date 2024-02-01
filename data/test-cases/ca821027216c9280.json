@@ -1,0 +1,429 @@
+{
+  "uid" : "ca821027216c9280",
+  "name" : "Search assistant",
+  "fullName" : "tests.feature_profile_test.TestProfileFeature#test_search_assistant",
+  "historyId" : "5072212cbe0f70fbe444f2ea8b1ce8c7",
+  "time" : {
+    "start" : 1706805390249,
+    "stop" : 1706805406433,
+    "duration" : 16184
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message:",
+  "statusTrace" : "self = <feature_profile_test.TestProfileFeature object at 0x7fd5cdcc4950>\n\n    @allure.title(\"Search assistant\")\n    @allure.severity(\"Critical\")\n    def test_search_assistant(self):\n        self.login_page.open()\n        self.login_page.enter_login(self.data.LOGIN)\n        self.login_page.enter_password(self.data.PASSWORD)\n        self.login_page.click_submit_button()\n        self.dashboard_page.is_opened()\n        self.dashboard_page.click_directory()\n        self.directory_page.is_opened()\n>       self.directory_page.add_field_employee(f\"Luis\")\n\ntests/feature_profile_test.py:87: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/directory_page.py:29: in add_field_employee\n    self.wait.until(EC.element_to_be_clickable(self.FIRST_NAME)).click()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"8a0ac52897d47245e5dc6702b75680e7\")>\nmethod = <function element_to_be_clickable.<locals>._predicate at 0x7fd5cdd41300>\nmessage = ''\n\n    def until(self, method: Callable[[WebDriver], Union[Literal[False], T]], message: str = \"\") -> T:\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n../local/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:101: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setup",
+    "time" : {
+      "start" : 1706805390249,
+      "stop" : 1706805390249,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1706805389428,
+      "stop" : 1706805390249,
+      "duration" : 821
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message:",
+    "statusTrace" : "self = <feature_profile_test.TestProfileFeature object at 0x7fd5cdcc4950>\n\n    @allure.title(\"Search assistant\")\n    @allure.severity(\"Critical\")\n    def test_search_assistant(self):\n        self.login_page.open()\n        self.login_page.enter_login(self.data.LOGIN)\n        self.login_page.enter_password(self.data.PASSWORD)\n        self.login_page.click_submit_button()\n        self.dashboard_page.is_opened()\n        self.dashboard_page.click_directory()\n        self.directory_page.is_opened()\n>       self.directory_page.add_field_employee(f\"Luis\")\n\ntests/feature_profile_test.py:87: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/directory_page.py:29: in add_field_employee\n    self.wait.until(EC.element_to_be_clickable(self.FIRST_NAME)).click()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"8a0ac52897d47245e5dc6702b75680e7\")>\nmethod = <function element_to_be_clickable.<locals>._predicate at 0x7fd5cdd41300>\nmessage = ''\n\n    def until(self, method: Callable[[WebDriver], Union[Literal[False], T]], message: str = \"\") -> T:\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n../local/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:101: TimeoutException",
+    "steps" : [ {
+      "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/auth/login page",
+      "time" : {
+        "start" : 1706805390249,
+        "stop" : 1706805391662,
+        "duration" : 1413
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Enter login",
+      "time" : {
+        "start" : 1706805391663,
+        "stop" : 1706805392726,
+        "duration" : 1063
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "login",
+        "value" : "'Admin'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Enter password",
+      "time" : {
+        "start" : 1706805392726,
+        "stop" : 1706805392799,
+        "duration" : 73
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "password",
+        "value" : "'admin123'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click submit",
+      "time" : {
+        "start" : 1706805392799,
+        "stop" : 1706805392844,
+        "duration" : 45
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index is opened",
+      "time" : {
+        "start" : 1706805392844,
+        "stop" : 1706805393704,
+        "duration" : 860
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Click on 'Directory' link",
+      "time" : {
+        "start" : 1706805393704,
+        "stop" : 1706805395304,
+        "duration" : 1600
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/directory/viewDirectory is opened",
+      "time" : {
+        "start" : 1706805395304,
+        "stop" : 1706805395307,
+        "duration" : 3
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Add fields",
+      "time" : {
+        "start" : 1706805395307,
+        "stop" : 1706805406432,
+        "duration" : 11125
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \n\n",
+      "statusTrace" : "  File \"/usr/local/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/usr/workspace/pages/directory_page.py\", line 29, in add_field_employee\n    self.wait.until(EC.element_to_be_clickable(self.FIRST_NAME)).click()\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 101, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "new_employee",
+        "value" : "'Luis'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 8,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1706805406438,
+      "stop" : 1706805406496,
+      "duration" : 58
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Profile Functionaloty"
+  }, {
+    "name" : "severity",
+    "value" : "Critical"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "feature_profile_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProfileFeature"
+  }, {
+    "name" : "host",
+    "value" : "47253e83006a"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.feature_profile_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 32,
+        "skipped" : 0,
+        "passed" : 347,
+        "unknown" : 0,
+        "total" : 379
+      },
+      "items" : [ {
+        "uid" : "6503e41bf9b6532",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706801765619,
+          "stop" : 1706801775693,
+          "duration" : 10074
+        }
+      }, {
+        "uid" : "1de1d033ca611857",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706798149443,
+          "stop" : 1706798159617,
+          "duration" : 10174
+        }
+      }, {
+        "uid" : "5c2be21d04de353d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706794581951,
+          "stop" : 1706794592847,
+          "duration" : 10896
+        }
+      }, {
+        "uid" : "d9a3c33eb6a8f7ca",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706791617329,
+          "stop" : 1706791627723,
+          "duration" : 10394
+        }
+      }, {
+        "uid" : "b0f398c7bf421aae",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706722563968,
+          "stop" : 1706722574148,
+          "duration" : 10180
+        }
+      }, {
+        "uid" : "e6016893059f1e55",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
+        "time" : {
+          "start" : 1706718968340,
+          "stop" : 1706718985445,
+          "duration" : 17105
+        }
+      }, {
+        "uid" : "d807cd4038deea1b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706715357188,
+          "stop" : 1706715367669,
+          "duration" : 10481
+        }
+      }, {
+        "uid" : "7bdcc461b57d86f7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706711742558,
+          "stop" : 1706711752661,
+          "duration" : 10103
+        }
+      }, {
+        "uid" : "86e5bcbd83dcc1cb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706708164461,
+          "stop" : 1706708175764,
+          "duration" : 11303
+        }
+      }, {
+        "uid" : "91b7a9f6d1d8d008",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706705219496,
+          "stop" : 1706705230156,
+          "duration" : 10660
+        }
+      }, {
+        "uid" : "e0f95acd2e4e6477",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
+        "time" : {
+          "start" : 1706636159537,
+          "stop" : 1706636173822,
+          "duration" : 14285
+        }
+      }, {
+        "uid" : "51e01fa02c013194",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706632763139,
+          "stop" : 1706632775289,
+          "duration" : 12150
+        }
+      }, {
+        "uid" : "1fd3c89e33848c03",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706628967362,
+          "stop" : 1706628977517,
+          "duration" : 10155
+        }
+      }, {
+        "uid" : "af2f3445ceca5586",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706625392436,
+          "stop" : 1706625405267,
+          "duration" : 12831
+        }
+      }, {
+        "uid" : "943e0cf33c7179a3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706621814087,
+          "stop" : 1706621825627,
+          "duration" : 11540
+        }
+      }, {
+        "uid" : "c9fbc684b40b30de",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706618788626,
+          "stop" : 1706618799882,
+          "duration" : 11256
+        }
+      }, {
+        "uid" : "9fe9d82d68dfbb88",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706549762902,
+          "stop" : 1706549773155,
+          "duration" : 10253
+        }
+      }, {
+        "uid" : "7d4813aaa36a0994",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706546260880,
+          "stop" : 1706546271393,
+          "duration" : 10513
+        }
+      }, {
+        "uid" : "1b13300e7e0b1783",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706542561795,
+          "stop" : 1706542572419,
+          "duration" : 10624
+        }
+      }, {
+        "uid" : "7a7a5868f4584892",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706538973311,
+          "stop" : 1706538991147,
+          "duration" : 17836
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "ca821027216c9280.json",
+  "parameterValues" : [ ]
+}
