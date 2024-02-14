@@ -1,5 +1,43 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.TimeoutException: Message:",
+      "children" : [ {
+        "name" : "Change profile name",
+        "uid" : "3af2a3c1f38e2f15",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1707933904559,
+          "stop" : 1707933925657,
+          "duration" : 21098
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "31bb78a6a95ede3f78b260ed048910d8"
+    }, {
+      "name" : "selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable\n  (Session info: headless chrome=112.0.5615.165)",
+      "children" : [ {
+        "name" : "Post random information",
+        "uid" : "7b5eaf04fabf8866",
+        "parentUid" : "f765455269c6fb0df6a00984b39faa5f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1707933941047,
+          "stop" : 1707933947500,
+          "duration" : 6453
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f765455269c6fb0df6a00984b39faa5f"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
   "name" : "categories"
 }
