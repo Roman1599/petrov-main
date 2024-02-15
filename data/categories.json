@@ -3,22 +3,48 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\n  (Session info: headless chrome=112.0.5615.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception",
+      "name" : "selenium.common.exceptions.TimeoutException: Message:",
       "children" : [ {
-        "name" : "Post random information",
-        "uid" : "9d78c2d0d2d4b227",
-        "parentUid" : "d39bf102e1e5bf5134ee723b8fd3f516",
+        "name" : "Change profile name",
+        "uid" : "2f85b9aa541bbea0",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1708007752220,
-          "stop" : 1708007759455,
-          "duration" : 7235
+          "start" : 1708011316729,
+          "stop" : 1708011330577,
+          "duration" : 13848
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Add employee",
+        "uid" : "7372153f39fabb7",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1708011354393,
+          "stop" : 1708011368086,
+          "duration" : 13693
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Search assistant",
+        "uid" : "2679f82584bd2972",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1708011368966,
+          "stop" : 1708011387271,
+          "duration" : 18305
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "d39bf102e1e5bf5134ee723b8fd3f516"
+      "uid" : "31bb78a6a95ede3f78b260ed048910d8"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
