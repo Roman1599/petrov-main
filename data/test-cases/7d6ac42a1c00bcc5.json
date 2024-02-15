@@ -1,0 +1,431 @@
+{
+  "uid" : "7d6ac42a1c00bcc5",
+  "name" : "Post random information",
+  "fullName" : "tests.feature_profile_test.TestProfileFeature#test_post",
+  "historyId" : "028bb0f23aa13d60158934f7f2b84f0f",
+  "time" : {
+    "start" : 1708015011957,
+    "stop" : 1708015018625,
+    "duration" : 6668
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable\n  (Session info: headless chrome=112.0.5615.165)",
+  "statusTrace" : "self = <feature_profile_test.TestProfileFeature object at 0x7f82c529cb60>\n\n    @allure.title(\"Post random information\")\n    @allure.severity(\"Critical\")\n    def test_post(self):\n        self.login_page.open()\n        self.login_page.enter_login(self.data.LOGIN)\n        self.login_page.enter_password(self.data.PASSWORD)\n        self.login_page.click_submit_button()\n        self.dashboard_page.is_opened()\n        self.dashboard_page.click_buzz()\n        self.buzz_page.is_opened()\n>       self.buzz_page.click_post_area(f\"Test text {random.randint(1, 100)}\")\n\ntests/feature_profile_test.py:53: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/buzz_page.py:34: in click_post_area\n    post_area_field.send_keys(new_value)\n../local/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py:230: in send_keys\n    self._execute(\n../local/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py:394: in _execute\n    return self._parent.execute(command, params)\n../local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:346: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f82c52aa1e0>\nresponse = {'status': 400, 'value': '{\"value\":{\"error\":\"element not interactable\",\"message\":\"element not interactable\\\\n  (Session info: headless chrome=112.0.5615.165)\",\"stacktrace\":\"\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable\nE         (Session info: headless chrome=112.0.5615.165)\n\n../local/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py:229: ElementNotInteractableException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setup",
+    "time" : {
+      "start" : 1708015011956,
+      "stop" : 1708015011957,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1708015011147,
+      "stop" : 1708015011956,
+      "duration" : 809
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable\n  (Session info: headless chrome=112.0.5615.165)",
+    "statusTrace" : "self = <feature_profile_test.TestProfileFeature object at 0x7f82c529cb60>\n\n    @allure.title(\"Post random information\")\n    @allure.severity(\"Critical\")\n    def test_post(self):\n        self.login_page.open()\n        self.login_page.enter_login(self.data.LOGIN)\n        self.login_page.enter_password(self.data.PASSWORD)\n        self.login_page.click_submit_button()\n        self.dashboard_page.is_opened()\n        self.dashboard_page.click_buzz()\n        self.buzz_page.is_opened()\n>       self.buzz_page.click_post_area(f\"Test text {random.randint(1, 100)}\")\n\ntests/feature_profile_test.py:53: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/buzz_page.py:34: in click_post_area\n    post_area_field.send_keys(new_value)\n../local/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py:230: in send_keys\n    self._execute(\n../local/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py:394: in _execute\n    return self._parent.execute(command, params)\n../local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:346: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f82c52aa1e0>\nresponse = {'status': 400, 'value': '{\"value\":{\"error\":\"element not interactable\",\"message\":\"element not interactable\\\\n  (Session info: headless chrome=112.0.5615.165)\",\"stacktrace\":\"\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable\nE         (Session info: headless chrome=112.0.5615.165)\n\n../local/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py:229: ElementNotInteractableException",
+    "steps" : [ {
+      "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/auth/login page",
+      "time" : {
+        "start" : 1708015011957,
+        "stop" : 1708015013966,
+        "duration" : 2009
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Enter login",
+      "time" : {
+        "start" : 1708015013966,
+        "stop" : 1708015015019,
+        "duration" : 1053
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "login",
+        "value" : "'Admin'"
+      } ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Enter password",
+      "time" : {
+        "start" : 1708015015019,
+        "stop" : 1708015015086,
+        "duration" : 67
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "password",
+        "value" : "'admin123'"
+      } ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Click submit",
+      "time" : {
+        "start" : 1708015015086,
+        "stop" : 1708015015126,
+        "duration" : 40
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index is opened",
+      "time" : {
+        "start" : 1708015015126,
+        "stop" : 1708015016065,
+        "duration" : 939
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Click on 'Buzz' link",
+      "time" : {
+        "start" : 1708015016065,
+        "stop" : 1708015017500,
+        "duration" : 1435
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/buzz/viewBuzz is opened",
+      "time" : {
+        "start" : 1708015017500,
+        "stop" : 1708015017503,
+        "duration" : 3
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Click on Post area",
+      "time" : {
+        "start" : 1708015017503,
+        "stop" : 1708015018624,
+        "duration" : 1121
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable\n  (Session info: headless chrome=112.0.5615.165)\n\n",
+      "statusTrace" : "  File \"/usr/local/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/usr/workspace/pages/buzz_page.py\", line 34, in click_post_area\n    post_area_field.send_keys(new_value)\n  File \"/usr/local/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py\", line 230, in send_keys\n    self._execute(\n  File \"/usr/local/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py\", line 394, in _execute\n    return self._parent.execute(command, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py\", line 346, in execute\n    self.error_handler.check_response(response)\n  File \"/usr/local/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py\", line 229, in check_response\n    raise exception_class(message, screen, stacktrace)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "new_value",
+        "value" : "'Test text 67'"
+      } ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 8,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1708015018673,
+      "stop" : 1708015018731,
+      "duration" : 58
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Profile Functionaloty"
+  }, {
+    "name" : "severity",
+    "value" : "Critical"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "feature_profile_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProfileFeature"
+  }, {
+    "name" : "host",
+    "value" : "d29c4f88fe94"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.feature_profile_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 58,
+        "skipped" : 0,
+        "passed" : 347,
+        "unknown" : 0,
+        "total" : 405
+      },
+      "items" : [ {
+        "uid" : "b2ea0f8a301b0cb7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708011345137,
+          "stop" : 1708011353519,
+          "duration" : 8382
+        }
+      }, {
+        "uid" : "9d78c2d0d2d4b227",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\n  (Session info: headless chrome=112.0.5615.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception",
+        "time" : {
+          "start" : 1708007752220,
+          "stop" : 1708007759455,
+          "duration" : 7235
+        }
+      }, {
+        "uid" : "8e1e0e0d8d7fdacd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708004183887,
+          "stop" : 1708004192332,
+          "duration" : 8445
+        }
+      }, {
+        "uid" : "a17983d880911e7e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708001167212,
+          "stop" : 1708001176477,
+          "duration" : 9265
+        }
+      }, {
+        "uid" : "7b5eaf04fabf8866",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable\n  (Session info: headless chrome=112.0.5615.165)",
+        "time" : {
+          "start" : 1707933941047,
+          "stop" : 1707933947500,
+          "duration" : 6453
+        }
+      }, {
+        "uid" : "12f7aab81550c295",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707309968535,
+          "stop" : 1707309977617,
+          "duration" : 9082
+        }
+      }, {
+        "uid" : "e3b23d2f4f3ada",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707240930120,
+          "stop" : 1707240938470,
+          "duration" : 8350
+        }
+      }, {
+        "uid" : "b6c139b7e5994f1a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707237414876,
+          "stop" : 1707237423327,
+          "duration" : 8451
+        }
+      }, {
+        "uid" : "b69eaac99becd932",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\n  (Session info: headless chrome=112.0.5615.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception",
+        "time" : {
+          "start" : 1707233761920,
+          "stop" : 1707233769125,
+          "duration" : 7205
+        }
+      }, {
+        "uid" : "4fd30bf7df051544",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707230139116,
+          "stop" : 1707230147179,
+          "duration" : 8063
+        }
+      }, {
+        "uid" : "78d3a917531128e3",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\n  (Session info: headless chrome=112.0.5615.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception",
+        "time" : {
+          "start" : 1707226544288,
+          "stop" : 1707226551196,
+          "duration" : 6908
+        }
+      }, {
+        "uid" : "fbc0bde179e60762",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707223591348,
+          "stop" : 1707223600668,
+          "duration" : 9320
+        }
+      }, {
+        "uid" : "5993133ec47cd5d9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707154559211,
+          "stop" : 1707154567694,
+          "duration" : 8483
+        }
+      }, {
+        "uid" : "301ec5b5382b874c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707150997450,
+          "stop" : 1707151005763,
+          "duration" : 8313
+        }
+      }, {
+        "uid" : "1bbad08e65d66ee8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707147327959,
+          "stop" : 1707147336395,
+          "duration" : 8436
+        }
+      }, {
+        "uid" : "6463341104ca2754",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707143726474,
+          "stop" : 1707143735242,
+          "duration" : 8768
+        }
+      }, {
+        "uid" : "4b2efa36876ce697",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707140147147,
+          "stop" : 1707140155233,
+          "duration" : 8086
+        }
+      }, {
+        "uid" : "6ef0605da7f934c6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707137222850,
+          "stop" : 1707137231662,
+          "duration" : 8812
+        }
+      }, {
+        "uid" : "5b6af79706c6b7e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706895331386,
+          "stop" : 1706895340513,
+          "duration" : 9127
+        }
+      }, {
+        "uid" : "2bc549df42e10de8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706891752916,
+          "stop" : 1706891762012,
+          "duration" : 9096
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "7d6ac42a1c00bcc5.json",
+  "parameterValues" : [ ]
+}
