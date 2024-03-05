@@ -1,0 +1,429 @@
+{
+  "uid" : "793322a39706b7db",
+  "name" : "Post random information",
+  "fullName" : "tests.feature_profile_test.TestProfileFeature#test_post",
+  "historyId" : "028bb0f23aa13d60158934f7f2b84f0f",
+  "time" : {
+    "start" : 1709660127233,
+    "stop" : 1709660133903,
+    "duration" : 6670
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\n  (Session info: headless chrome=112.0.5615.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception",
+  "statusTrace" : "self = <feature_profile_test.TestProfileFeature object at 0x7f318f5edbb0>\n\n    @allure.title(\"Post random information\")\n    @allure.severity(\"Critical\")\n    def test_post(self):\n        self.login_page.open()\n        self.login_page.enter_login(self.data.LOGIN)\n        self.login_page.enter_password(self.data.PASSWORD)\n        self.login_page.click_submit_button()\n        self.dashboard_page.is_opened()\n        self.dashboard_page.click_buzz()\n        self.buzz_page.is_opened()\n>       self.buzz_page.click_post_area(f\"Test text {random.randint(1, 100)}\")\n\ntests/feature_profile_test.py:53: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/buzz_page.py:33: in click_post_area\n    post_area_field = self.wait.until(EC.element_to_be_clickable(self.POST_AREA))\n../local/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:92: in until\n    value = method(self._driver)\n../local/lib/python3.12/site-packages/selenium/webdriver/support/expected_conditions.py:357: in _predicate\n    if element and element.is_enabled():\n../local/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py:191: in is_enabled\n    return self._execute(Command.IS_ELEMENT_ENABLED)[\"value\"]\n../local/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py:394: in _execute\n    return self._parent.execute(command, params)\n../local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:346: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f318f0cab40>\nresponse = {'status': 404, 'value': '{\"value\":{\"error\":\"stale element reference\",\"message\":\"stale element reference: element is not attached to the page document\\\\n  (Session info: headless chrome=112.0.5615.165)\",\"stacktrace\":\"\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\nE         (Session info: headless chrome=112.0.5615.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception\n\n../local/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py:229: StaleElementReferenceException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1709660126420,
+      "stop" : 1709660127232,
+      "duration" : 812
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "setup",
+    "time" : {
+      "start" : 1709660127232,
+      "stop" : 1709660127233,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\n  (Session info: headless chrome=112.0.5615.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception",
+    "statusTrace" : "self = <feature_profile_test.TestProfileFeature object at 0x7f318f5edbb0>\n\n    @allure.title(\"Post random information\")\n    @allure.severity(\"Critical\")\n    def test_post(self):\n        self.login_page.open()\n        self.login_page.enter_login(self.data.LOGIN)\n        self.login_page.enter_password(self.data.PASSWORD)\n        self.login_page.click_submit_button()\n        self.dashboard_page.is_opened()\n        self.dashboard_page.click_buzz()\n        self.buzz_page.is_opened()\n>       self.buzz_page.click_post_area(f\"Test text {random.randint(1, 100)}\")\n\ntests/feature_profile_test.py:53: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/buzz_page.py:33: in click_post_area\n    post_area_field = self.wait.until(EC.element_to_be_clickable(self.POST_AREA))\n../local/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:92: in until\n    value = method(self._driver)\n../local/lib/python3.12/site-packages/selenium/webdriver/support/expected_conditions.py:357: in _predicate\n    if element and element.is_enabled():\n../local/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py:191: in is_enabled\n    return self._execute(Command.IS_ELEMENT_ENABLED)[\"value\"]\n../local/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py:394: in _execute\n    return self._parent.execute(command, params)\n../local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:346: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f318f0cab40>\nresponse = {'status': 404, 'value': '{\"value\":{\"error\":\"stale element reference\",\"message\":\"stale element reference: element is not attached to the page document\\\\n  (Session info: headless chrome=112.0.5615.165)\",\"stacktrace\":\"\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\nE         (Session info: headless chrome=112.0.5615.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception\n\n../local/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py:229: StaleElementReferenceException",
+    "steps" : [ {
+      "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/auth/login page",
+      "time" : {
+        "start" : 1709660127233,
+        "stop" : 1709660129237,
+        "duration" : 2004
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Enter login",
+      "time" : {
+        "start" : 1709660129237,
+        "stop" : 1709660130291,
+        "duration" : 1054
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "login",
+        "value" : "'Admin'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Enter password",
+      "time" : {
+        "start" : 1709660130292,
+        "stop" : 1709660130359,
+        "duration" : 67
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "password",
+        "value" : "'admin123'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Click submit",
+      "time" : {
+        "start" : 1709660130360,
+        "stop" : 1709660130400,
+        "duration" : 40
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index is opened",
+      "time" : {
+        "start" : 1709660130400,
+        "stop" : 1709660131338,
+        "duration" : 938
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Click on 'Buzz' link",
+      "time" : {
+        "start" : 1709660131338,
+        "stop" : 1709660132828,
+        "duration" : 1490
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Open https://opensource-demo.orangehrmlive.com/web/index.php/buzz/viewBuzz is opened",
+      "time" : {
+        "start" : 1709660132828,
+        "stop" : 1709660132830,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Click on Post area",
+      "time" : {
+        "start" : 1709660132830,
+        "stop" : 1709660133902,
+        "duration" : 1072
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\n  (Session info: headless chrome=112.0.5615.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception\n\n",
+      "statusTrace" : "  File \"/usr/local/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/usr/workspace/pages/buzz_page.py\", line 33, in click_post_area\n    post_area_field = self.wait.until(EC.element_to_be_clickable(self.POST_AREA))\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 92, in until\n    value = method(self._driver)\n            ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/selenium/webdriver/support/expected_conditions.py\", line 357, in _predicate\n    if element and element.is_enabled():\n                   ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py\", line 191, in is_enabled\n    return self._execute(Command.IS_ELEMENT_ENABLED)[\"value\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py\", line 394, in _execute\n    return self._parent.execute(command, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py\", line 346, in execute\n    self.error_handler.check_response(response)\n  File \"/usr/local/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py\", line 229, in check_response\n    raise exception_class(message, screen, stacktrace)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "new_value",
+        "value" : "'Test text 19'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 8,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1709660133957,
+      "stop" : 1709660134014,
+      "duration" : 57
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "Critical"
+  }, {
+    "name" : "feature",
+    "value" : "Profile Functionaloty"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "feature_profile_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProfileFeature"
+  }, {
+    "name" : "host",
+    "value" : "b8fa34d265cf"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.feature_profile_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 78,
+        "skipped" : 0,
+        "passed" : 406,
+        "unknown" : 0,
+        "total" : 484
+      },
+      "items" : [ {
+        "uid" : "2205253ccce65449",
+        "status" : "passed",
+        "time" : {
+          "start" : 1709656603381,
+          "stop" : 1709656612618,
+          "duration" : 9237
+        }
+      }, {
+        "uid" : "e96dd9dcdcf407e4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1709652961153,
+          "stop" : 1709652970138,
+          "duration" : 8985
+        }
+      }, {
+        "uid" : "6c2110b9401d862d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1709649411667,
+          "stop" : 1709649421060,
+          "duration" : 9393
+        }
+      }, {
+        "uid" : "1a7e713def85750d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1709645742745,
+          "stop" : 1709645752109,
+          "duration" : 9364
+        }
+      }, {
+        "uid" : "b94230925f02aa3a",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\n  (Session info: headless chrome=112.0.5615.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception",
+        "time" : {
+          "start" : 1709642845500,
+          "stop" : 1709642851871,
+          "duration" : 6371
+        }
+      }, {
+        "uid" : "c14e972fd51124b9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1709573720991,
+          "stop" : 1709573729334,
+          "duration" : 8343
+        }
+      }, {
+        "uid" : "2775aec468d22a2d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1709570275120,
+          "stop" : 1709570283667,
+          "duration" : 8547
+        }
+      }, {
+        "uid" : "85c233f3ff2a8369",
+        "status" : "passed",
+        "time" : {
+          "start" : 1709566548949,
+          "stop" : 1709566557706,
+          "duration" : 8757
+        }
+      }, {
+        "uid" : "95fe59a9f2d9d984",
+        "status" : "passed",
+        "time" : {
+          "start" : 1709563030083,
+          "stop" : 1709563038506,
+          "duration" : 8423
+        }
+      }, {
+        "uid" : "706463e88cb2b0ed",
+        "status" : "passed",
+        "time" : {
+          "start" : 1709559363368,
+          "stop" : 1709559371979,
+          "duration" : 8611
+        }
+      }, {
+        "uid" : "2f73bc3036f68109",
+        "status" : "passed",
+        "time" : {
+          "start" : 1709556600663,
+          "stop" : 1709556609754,
+          "duration" : 9091
+        }
+      }, {
+        "uid" : "fe575f647848b872",
+        "status" : "passed",
+        "time" : {
+          "start" : 1709314851057,
+          "stop" : 1709314859402,
+          "duration" : 8345
+        }
+      }, {
+        "uid" : "bec87c75e436d915",
+        "status" : "passed",
+        "time" : {
+          "start" : 1709310977803,
+          "stop" : 1709310985922,
+          "duration" : 8119
+        }
+      }, {
+        "uid" : "31e61183acf46473",
+        "status" : "passed",
+        "time" : {
+          "start" : 1709307349909,
+          "stop" : 1709307358280,
+          "duration" : 8371
+        }
+      }, {
+        "uid" : "fb6e62d82eba95af",
+        "status" : "passed",
+        "time" : {
+          "start" : 1709303764162,
+          "stop" : 1709303773254,
+          "duration" : 9092
+        }
+      }, {
+        "uid" : "83214fc25f799c2f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1709300193491,
+          "stop" : 1709300202734,
+          "duration" : 9243
+        }
+      }, {
+        "uid" : "55f9b862b0952af4",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document\n  (Session info: headless chrome=112.0.5615.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception",
+        "time" : {
+          "start" : 1709297168968,
+          "stop" : 1709297175557,
+          "duration" : 6589
+        }
+      }, {
+        "uid" : "c787d18be5f1bcc1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1709228133967,
+          "stop" : 1709228142217,
+          "duration" : 8250
+        }
+      }, {
+        "uid" : "8141308c149a3010",
+        "status" : "passed",
+        "time" : {
+          "start" : 1709224568796,
+          "stop" : 1709224577180,
+          "duration" : 8384
+        }
+      }, {
+        "uid" : "84daec98ca66c94c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1709220948828,
+          "stop" : 1709220956784,
+          "duration" : 7956
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "793322a39706b7db.json",
+  "parameterValues" : [ ]
+}
